@@ -4,7 +4,7 @@ module.exports = {
     es2022: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 13,
@@ -12,8 +12,8 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    semi: ['error', 'never'],
     'prettier/prettier': 'error',
   },
   ignorePatterns: ['03-files-in-folder/secret-folder/**/*.js'],
-};
+}
