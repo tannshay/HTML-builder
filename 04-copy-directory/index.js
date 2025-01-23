@@ -7,6 +7,7 @@ const fsPromises = fs.promises
   const destinationFolder = path.join(__dirname, 'files-copy')
 
   try {
+    await fsPromises.rm(destinationFolder, { recursive: true, force: true })
     await fsPromises.mkdir(destinationFolder, { recursive: true })
 
     const files = await fsPromises.readdir(sourceFolder)
