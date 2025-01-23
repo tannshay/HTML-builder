@@ -24,7 +24,7 @@ rl.on('line', (input) => {
   console.log('Enter your text or "exit" one more time')
 })
 
-process.on('SIGINT', () => {
+rl.on('SIGINT', () => {
   console.log('\nBye!')
   rl.close()
   process.exit()
